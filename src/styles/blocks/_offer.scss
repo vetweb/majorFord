@@ -1,0 +1,118 @@
+.offer {
+  counter-reset: heading;
+  padding-left: 30px;
+  overflow: hidden;
+  background: $c-bg-section;
+
+  @include md {
+    overflow: auto;
+    padding-left: 45px;
+  }
+
+  @include lg {
+    padding: 85px 0 60px 0;
+  }
+
+  &__row {
+    margin-right: -15px;
+
+    @include md {
+      margin-right: 0;
+    }
+
+    @include lg {
+      @include row(40px);
+    }
+  }
+
+  &__col {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include sm {
+      margin: 0 auto 30px;
+      max-width: 477px;
+    }
+
+    @include lg {
+      width: 33.3333%;
+      @include col(40px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include myfont(15px);
+    line-height: 18px;
+    @include sizes(100%, 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px 15px 60px;
+    font-weight: 600;
+    background: #c09c52;
+    color: #fff;
+    box-shadow: 0 3px 6px #00000029;
+
+    @include md {
+      padding: 15px 55px 15px 60px;
+    }
+    @include lg {
+      padding: 50px 15px 15px;
+      height: 165px;
+      @include myfont(17px);
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: -32px;
+      top: 14px;
+      @include myfont(33px);
+      @include sizes(64px, 70%);
+      line-height: 65px;
+      font-weight: 700;
+
+      @include lg {
+        left: 50%;
+        top: -40px;
+        @include sizes(80px);
+        margin-left: -40px;
+        @include myfont(45px);
+        line-height: 80px;
+      }
+    }
+
+    &:before {
+      counter-increment: heading;
+      content: '0' counter(heading);
+      text-align: center;
+      color: inherit;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+      background: inherit;
+      box-shadow: 3px 0 6px #00000029;
+    }
+
+    &--first {
+      background: #9FC150;
+
+      @include lg {
+        text-align: center;
+      }
+    }
+
+    &--lising {
+      background: #187CBE;
+    }
+
+    &--subsid {
+      background: #EE584D;
+    }
+  }
+}

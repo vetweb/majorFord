@@ -1,0 +1,12 @@
+.swiper-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background: #3ba2a2;
+
+  &__content{
+    position: relative;
+    width: 150px;
+  }
+}

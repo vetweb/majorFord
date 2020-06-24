@@ -1,0 +1,5 @@
+.section_title {
+  color: $c-title;
+  @include myfont(20px);
+  font-weight: 700;
+}

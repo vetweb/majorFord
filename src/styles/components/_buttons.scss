@@ -1,0 +1,34 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  @include myfont(18px);
+  color: $c-text-btn;
+  background: $c-bg-btn;
+  border: 0;
+  text-align: center;
+  @include transition(all 0.3s ease-in-out);
+  cursor: pointer;
+  text-decoration: none;
+
+  @include sm {
+    max-width: 265px;
+  }
+
+  &:hover {
+    background: darken($c-bg-btn, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--inner {
+    background: $c-bg-btn-inner;
+    color: $c-text-btn-inner;
+
+    &:hover {
+      background: darken($c-bg-btn-inner, 10%);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+// burger menu
+.burger-menu {
+  &__button {
+    position: relative;
+    @include sizes(80px);
+    border-radius: 50%;
+    border: 0;
+    background: none;
+    @include transition(all, 0.4s ease);
+    z-index: 30;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:before {
+      content: '';
+      top: -9px;
+    }
+
+    &:after {
+      content: '';
+      top: 9px;
+    }
+
+  }
+
+  &__lines,
+  &__lines:after,
+  &__lines:before {
+    position: absolute;
+    @include sizes(27px, 3px);
+    left: auto;
+    right: 0;
+    background-color: $c-black;
+    @include transition(all, 0.4s ease);
+  }
+
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    @include sizes(100vh);
+    background: $c-black;
+    opacity: 0;
+    z-index: 10;
+    @include transition(all, 0.3s ease);
+  }
+
+}
+
+.burger-menu-active {
+  .burger-menu {
+    &__overlay {
+      display: block;
+      opacity: 0.4;
+    }
+
+    &__lines {
+      background-color: transparent;
+
+      &:after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.top-menu {
+  display: none;
+  flex: 1 auto;
+
+  @include lg {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+  }
+
+  &__item {
+    @include myfont(16px);
+    margin-right: 5.1%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: $c-black;
+  }
+}

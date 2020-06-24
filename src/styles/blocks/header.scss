@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+
+  &__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;
+
+    @include md {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 110px;
+      bottom: 0;
+      margin: auto;
+    }
+
+    @include md {
+
+    }
+
+  }
+
+  &__form-conntent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin: 0 -15px;
+
+    @include sm {
+      max-width: 540px;
+      margin: 0 -15px;
+    }
+
+    @include md {
+      justify-content: flex-end;
+      margin: 0 0 0 auto;
+      width: 45%;
+    }
+
+    @include lg {
+      width: 33.333%;
+    }
+
+  }
+
+  &__form-title {
+    margin-bottom: 15px;
+    @include myfont(25px);
+    font-weight: 400;
+    text-align: center;
+  }
+}

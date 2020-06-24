@@ -1,0 +1,92 @@
+.header-promo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  background: url('#{$img-path}bg-header_1920х540_.png') no-repeat center;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    display: block;
+    @include propotionalSize(29.2%);
+  }
+
+  @include sm {
+    &:after {
+      @include propotionalSize(55%);
+    }
+  }
+
+  @include md {
+    &:after {
+      @include propotionalSize(29.2%);
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    @include sizes(100%);
+    background: $c-black;
+    opacity: 0.4;
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto 0 0;
+    z-index: 2;
+
+    @include md {
+      width: 55%;
+    }
+
+    @include lg {
+      width: 66.6666%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+
+    @include md {
+      max-width: 350px;
+    }
+
+    @include lg {
+      max-width: 500px;
+    }
+
+    @include xl {
+      max-width: 740px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    @include myfont(25px);
+    font-weight: 700;
+    color: $c-white;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+
+    @include md {
+      margin-bottom: 25px;
+      @include myfont(30px);
+    }
+
+    @include lg {
+      @include myfont(40px);
+    }
+
+    @include xl {
+      margin-bottom: 15px;
+    }
+  }
+}
+

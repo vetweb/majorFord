@@ -1,0 +1,39 @@
+// Colors
+$c-white: #fff;
+$c-black: #000;
+$c-yellow: #FFE026;
+$c-red: #EE584D;
+$c-red-2: #FF0000;
+$c-gray: #E5E2E2;
+$c-gray-2: #F6F6F6;
+
+$c-bg-btn: $c-red;
+$c-bg-btn-inner: $c-yellow;
+$c-text-btn: #fff;
+$c-text-btn-inner: #000;
+
+$c-bg-icon: $c-red;
+$c-title: #000;
+$c-text: #000;
+$c-border: $c-gray;
+
+$c-link: $c-black;
+$c-link-label: $c-red;
+
+$c-icon-form: #878787;
+$c-error: $c-red-2;
+
+$c-bg-section: $c-gray-2;
+// Paths
+$img-path: '/assets/img/';
+$img-path-icons: '/assets/img/icons/';
+
+// Fonts
+$font-family: 'Montserrat', sans-serif;
+
+
+/* Breakpoint media */
+$xl_width: 1200px;
+$lg_width: 992px;
+$md_width: 768px;
+$sm_width: 576px;

@@ -1,0 +1,173 @@
+{% set linkBuy = 'https://forms.gle/h3eqmHkBQ14eGZvj8' %}
+
+<div class="price centering" id="BlockPrice">
+    <div class="content">
+        <div class="contentPage">
+            <div class="block">
+                <h2>Стоимость</h2>
+                <div class="separator-deco"></div>
+                <div class="contentFix">
+                    <p>
+                        Не будем Вас грузить кучей информации о ценах.
+                        Все просто. 2 робота. Несколько вариантов приобритения. Аренда.
+                    </p>
+
+                    <p>Мы даем Вам инструмент, а решение принимаете уже Вы!</p>
+
+                    <div class="price__subTitle p-content centering indent-tb-30">
+                        Пора зарабатывать! Погнали! 🤑
+                    </div>
+                </div>
+                <h2 class="indent-b-20">Доступные решения</h2>
+                <div class="price__cols">
+                    <div class="cols-block cols-style">
+                        <div class="col-block col-block__price">
+                            <div class="col-style price-col">
+                                <div class="col-style__info">
+                                    <h2>Робот <br>от <span class="deco-content-text">10% до 30%</span> в месяц</h2>
+                                    <div class="col-style__title price-col__title">
+                                        🔥36 000 руб🔥
+                                    </div>
+                                    <div class="col-style__description">
+                                        <p>
+                                            Основной робот. С него стоит начинать
+                                        </p>
+                                        <p>Space Cluster - это робот для разнона депозита.</p>
+                                        <span class="jslinkMore linkMore">Подробнее</span>
+                                    </div>
+                                    <a class="button col-style__button" href="{{ linkBuy }}">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-block col-block__price">
+                            <div class="col-style price-col">
+                                <div class="col-style__info">
+                                    <h2>Аренда</h2>
+                                    <div class="col-style__title price-col__title">🔥2 000 руб.🔥 </div>
+                                    <div class="col-style__description">
+                                        <p>2 000 руб. в 1 месяц</p>
+                                        <p class="deco-content-text">
+                                            Если Ваш депозит составит $300 и более ,
+                                            то аренда 1 месяца робота бесплатно.
+                                        </p>
+                                        <span class="jslinkMoreRent linkMore"
+                                              onclick="OpenModalRent();">Подробнее</span>
+                                    </div>
+                                    <a class="button col-style__button" href="{{ linkBuy }}">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                {# Faq Price #}
+                <div class="faq">
+                    <h3>Сразу ответим на частые вопросы</h3>
+                    <div class="separator-deco"></div>
+                    <ul class="content-list">
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">Окупятся ли вложения? И как скоро?</div>
+                            <div class="faq-item__description">При депозите. ~60 000 руб. за 1 месяц Вы отобьете
+                                стоимость робота
+                            </div>
+                        </li>
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">Есть ли возможность оплаты по частям?</div>
+                            <div class="faq-item__description">Да. Есть.</div>
+                        </li>
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">Можно ли купить и оплатить с процентов от трейдинга?</div>
+                            <div class="faq-item__description">Нет. Для таких целей существует аренда.
+                            </div>
+                        </li>
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">Можно ли его взломать или найти в бесплатном доступе?</div>
+                            <div class="faq-item__description">Нет. Взломать не получится. И найти также не получится.
+                                Без привязки
+                                робота к счету он не работает.
+                            </div>
+                        </li>
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">Оплата единоразовая?</div>
+                            <div class="faq-item__description">Да</div>
+                        </li>
+                        <li class="content-item faq-item">
+                            <div class="content-item__title">На сколько можно арендовать робот?</div>
+                            <div class="faq-item__description">Робот арендуется максимум на 3 месяца. После данного
+                                периода аренда не доступна. Остается возможность приобрести робот за полную стоимость.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {# Faq Price End #}
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Modal Pice #}
+<div class="jsModalPrice">
+    <div class="modal">
+        <div class="modal__overlay jsModalOverlayClose"></div>
+        <div class="modal__wrapper">
+            <div class="modal__content contentPage">
+                <span class="jsModalClose modal__close">x</span>
+
+                <div class="modal__info">
+                    <h3>Покупка робота Space Grid.</h3>
+                    <div class="separator-deco separator-deco--left"></div>
+
+                    <ul class="faq-list">
+                        <li class="faq-item">
+                            <p>
+                                Вы покупаете робот <strong>1 раз</strong>. Далее все последующие обновления бесплатны.🤑
+                            </p>
+                        </li>
+
+                        <li class="faq-item">
+                            <p>Устанавливается 1 робот на 1 счет</p>
+                            <p>Установка на Ваш 2-й и далее счета скидка 20% за каждый робот</p>
+                        </li>
+                    </ul>
+                    <p>
+                        Если для Вас данный инструмент достаточно дорогой, то у нас есть решение - аренда робота.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="jsModalPriceRent">
+    <div class="modal">
+        <div class="modal__overlay jsModalOverlayCloseRent"></div>
+        <div class="modal__wrapper">
+            <div class="modal__content contentPage">
+                <span class="jsModalCloseRent modal__close">x</span>
+
+                <div class="modal__info">
+                    <h3>Аренда робота</h3>
+                    <div class="separator-deco separator-deco--left"></div>
+                    <p>
+                        Робот арендуется максимум на <strong>3 месяца</strong>. После данного
+                        периода аренда не доступна. Этого периода более чем достаточно, чтобы принять решение о
+                        покупке. 👌
+                    </p>
+
+                    <p>
+                        Как правило - уже по окончании <strong>1 - 2 месяцев</strong> аренды, человек приобретает робот.🤑 😎
+                    </p>
+                    <li class="faq-item">
+                        <p>
+
+                        </p>
+                    </li>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{# Modal Pice End #}
+

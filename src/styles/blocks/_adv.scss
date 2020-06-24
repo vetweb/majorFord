@@ -1,0 +1,113 @@
+.adv {
+  &__slider {
+    display: block;
+
+    @include lg {
+      display: none;
+    }
+
+    .swiper-container {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__static-items {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__row {
+    @include lg {
+      @include row(44px);
+
+    }
+  }
+
+  &__col {
+    @include lg {
+      @include col(44px);
+      width: 25%;
+    }
+  }
+
+}
+
+.adv-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include sizes(280px);
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px #00000029;
+  text-align: center;
+
+  @include sm {
+    @include sizes(250px);
+  }
+
+  @include md {
+    margin: 0;
+    @include sizes(206px);
+  }
+
+  @include xl {
+    @include sizes(250px);
+  }
+
+  &__icon {
+    @include sizes(88px);
+    margin: 0 auto 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include md {
+      @include sizes(60px);
+    }
+
+    &--recommended {
+      background-image: url('#{$img-path-icons}i-adv-recommended.svg');
+    }
+
+    &--free-sticker {
+      background-image: url('#{$img-path-icons}i-adv-recommended.svg');
+    }
+
+    &--fast-delivery {
+      background-image: url('#{$img-path-icons}i-adv-fast-delivery.svg');
+    }
+
+    &--lising {
+      background-image: url('#{$img-path-icons}i-adv-car.svg');
+    }
+  }
+
+  &__description {
+    width: 80%;
+    max-width: 185px;
+    margin: 0 auto;
+    @include myfont(17px);
+    font-weight: 700;
+
+    @include md {
+      @include myfont(14px);
+      line-height: 16px;
+    }
+
+    @include lg {
+      @include myfont(15px);
+    }
+  }
+
+  &__link {
+    @include myfont(16px);
+    font-weight: 300;
+    color: $c-text;
+    text-decoration: underline;
+  }
+}

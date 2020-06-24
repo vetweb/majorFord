@@ -1,0 +1,111 @@
+
+// Example
+// @include myfont(36px);
+@mixin myfont($size) {
+  font-size: $size;
+  @include line-height($size);
+}
+
+@mixin line-height($fon-size) {
+  line-height: $fon-size + 4;
+}
+
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+  @each $transition in $transitions {
+    $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+  }
+
+  -webkit-transition: $unfoldedTransitions;
+  transition: $unfoldedTransitions;
+}
+
+@function unfoldTransition ($transition) {
+  // Default values
+  $property: all;
+  $duration: .2s;
+  $easing: null; // Browser default is ease, which is what we want
+  $delay: null; // Browser default is 0, which is what we want
+  $defaultProperties: ($property, $duration, $easing, $delay);
+
+  // Grab transition properties if they exist
+  $unfoldedTransition: ();
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+    @if $i <= length($transition) {
+      $p: nth($transition, $i)
+    } @else {
+      $p: nth($defaultProperties, $i)
+    }
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
+
+// size to one line
+@mixin sizes($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+@mixin row($space) {
+  @include flex(row, flex-start, stretch, wrap);
+  margin-left: -1 * $space / 2;
+  margin-right: -1 * $space / 2;
+}
+
+@mixin col($space) {
+  flex: 0 0 auto;
+  padding-left: $space / 2;
+  padding-right: $space / 2;
+}
+
+@mixin flex($direction, $justify, $align, $wrap:nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// BP
+@mixin sm{
+  @media screen and (min-width: #{$sm_width}) {
+    @content;
+  }
+}
+
+@mixin md{
+  @media screen and (min-width: #{$md_width}) {
+    @content;
+  }
+}
+
+@mixin lg{
+  @media screen and (min-width: #{$lg_width}) {
+    @content;
+  }
+}
+
+@mixin xl{
+  @media screen and (min-width: #{$xl_width}) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @media screen and (max-width: #{$md_width}) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @media screen and (max-width: #{$lg_width}) {
+    @content;
+  }
+}
+@mixin propotionalSize($propotionalSize: 56.5%) {
+  padding-bottom: $propotionalSize;
+}

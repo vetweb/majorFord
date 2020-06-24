@@ -1,0 +1,78 @@
+<div class="modal jsModalForm">
+    <div class="modal__overlay jsModalOverlay"></div>
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <span class="jsModalClose modal__close">x</span>
+            <div class="modal__info">
+                <div class="form">
+                    <div class="form__success">
+                        <div class="form__success-content">
+                            <i class="form__success-icon"></i>
+                            <p>Заявка успешно отправлена!</p>
+                            <p>Мы свяжемся с Вами в ближайшее время.</p>
+                        </div>
+                    </div>
+                    <form action="" data-form-validate="true" method="post" id="order-form-2" novalidate="novalidate">
+                        <div class="header__form-title">Оставьте заявку</div>
+                        <div class="form__field form-field">
+                            <div class="form-field__input form-field__input--with-icon">
+                                <i class="icon form-field__icon-input">
+                                    <svg width="13.86" height="13.889" viewBox="0 0 13.86 13.889">
+                                        <use xlink:href="#icon-phone">
+                                    </svg>
+                                </i>
+                                <input data-rule-required="true"
+                                       data-msg-required="Имя введено неправильно"
+                                       type="text" name="text" placeholder="Ваше имя">
+                            </div>
+                        </div>
+                        <div class="form__field form-field">
+                            <div class="form-field__input form-field__input--with-icon">
+                                <i class="icon form-field__icon-input">
+                                    <svg width="13.86" height="13.889" viewBox="0 0 13.86 13.889">
+                                        <use xlink:href="#icon-phone">
+                                    </svg>
+                                </i>
+                                <input type="text" placeholder="Введите телефон">
+                            </div>
+                        </div>
+                        <div class="form__field form-field">
+                            <div class="form-field__input form-field__input--with-icon">
+                                <i class="icon icon--mail form-field__icon-input">
+                                    <svg width="13.86" height="13.889" viewBox="0 0 13.86 13.889">
+                                        <use xlink:href="#icon-phone">
+                                    </svg>
+                                </i>
+                                <input data-rule-required="true" data-msg-required="Email введен неправильно"
+                                       type="email" name="email" placeholder="Введите Email">
+                            </div>
+                        </div>
+
+                        <div class="form__field form-field__checkbox">
+                            <div class="checkbox">
+                                <input class="checkbox_input" name="checkbox" id="policy2" type="checkbox"
+                                       data-rule-required="true"
+                                       data-msg-required=" ">
+                                <label class="checkbox_label" for="policy2">
+                                    <span class="checkbox_fake-check"></span>
+                                    <span>
+                                    Согласен на обработку <a href="#">личных данных и обратную коммуникацию</a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__field">
+                            <button class="button modal__button">Оставить заявку</button>
+                        </div>
+
+                        <div class="form__privacy-text">
+                            Ваши личные данные будут использоваться для оперативной связи с Вами. Major обеспечивает
+                            защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="#">«Политика безопасности»</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

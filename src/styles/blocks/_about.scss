@@ -1,0 +1,114 @@
+.about {
+  padding: 30px 0 0;
+  background: $c-bg-section;
+
+  @include lg {
+    padding: 40px 0 60px;
+
+  }
+
+  &__row {
+    @include lg {
+      @include row(20px);
+    }
+  }
+
+  &__info {
+    margin-bottom: 30px;
+
+    @include lg {
+      width: 50%;
+      @include col(20px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    @include myfont(18px);
+    line-height: 30px;
+
+    @include lg {
+      margin-bottom: 40px;
+      @include myfont(16px);
+      line-height: 22px;
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding: 0 0 0 25px;
+      margin-bottom: 30px;
+      @include myfont(16px);
+      font-weight: 600;
+      list-style: none;
+
+      @include lg {
+        @include myfont(18px);
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 4px;
+        @include sizes(12px);
+        background: #FFE026;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+
+    @include lg {
+      margin-top: 60px;
+    }
+  }
+
+  &__img-col {
+    margin: 0 -15px;
+
+    @include sm {
+      margin: 0;
+    }
+
+    @include lg {
+      width: 50%;
+      @include col(20px);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    background: url('#{$img-path}about.png') no-repeat center;
+    background-size: cover;
+
+    &:after {
+      content: "";
+      display: block;
+      @include propotionalSize();
+    }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  only screen and (min--moz-device-pixel-ratio: 1.25),
+  only screen and (-o-min-device-pixel-ratio: 1.25/1),
+  only screen and (min-device-pixel-ratio: 1.25),
+  only screen and (min-resolution: 200dpi),
+  only screen and (min-resolution: 1.25dppx) {
+    .logo {
+      background: url('#{$img-path}about@2x.png') no-repeat center;
+
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// Libs
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Styles
+@import "abstract/vars";
+@import 'common/reset';
+
+@import 'abstract/mixin';
+@import 'components/buttons';
+@import 'components/titles';
+@import 'components/icons';
+@import 'components/menu';
+@import 'components/form';
+@import 'components/modal';
+@import 'components/contats-data';
+@import 'components/top-menu';
+@import 'components/burger-menu';
+@import 'components/swiper-custom';
+
+@import 'blocks/content';
+@import 'blocks/header';
+@import 'blocks/mob-navigation';
+@import 'blocks/top-navigation';
+@import 'blocks/header-promo';
+@import 'blocks/offer';
+@import 'blocks/adv';
+@import 'blocks/catalog';
+@import 'blocks/about';
+@import 'blocks/footer';
