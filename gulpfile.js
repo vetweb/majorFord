@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 var paths = {
     buildAssets: './assets/',
-    prodPages: './app/',
+    prodPages: './',
     src: './src/',
     srcScss: './src/styles',
     srcJs: './src/js/',
@@ -28,7 +28,7 @@ var paths = {
 gulp.task('twig', function () {
     'use strict';
     var twig = require('gulp-twig');
-    return gulp.src(paths.src + '/template/**/*.twig')
+    return gulp.src(paths.src + '/template/index.twig')
         .pipe(twig({
             data: {
                 title: ''
