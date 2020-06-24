@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 var paths = {
     buildAssets: './assets/',
-    prodPages: './',
+    prodPages: './app/',
     src: './src/',
     srcScss: './src/styles',
     srcJs: './src/js/',
