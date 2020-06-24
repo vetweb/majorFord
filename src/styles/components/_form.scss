@@ -7,10 +7,11 @@
 
   &__small {
     padding: 20px 55px 30px;
-    max-width: 300px;
+    max-width: 100%;
     box-shadow: 0 3px 6px #00000029;
 
     @include md {
+      max-width: 300px;
       padding: 30px 18px;
     }
   }
