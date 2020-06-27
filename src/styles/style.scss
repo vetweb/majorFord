@@ -3,9 +3,11 @@
 
 // Styles
 @import "abstract/vars";
-@import 'common/reset';
-
 @import 'abstract/mixin';
+
+@import 'common/reset';
+@import 'common/base';
+
 @import 'components/buttons';
 @import 'components/titles';
 @import 'components/icons';

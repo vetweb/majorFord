@@ -2,22 +2,39 @@
   display: none;
 
   @include lg-up {
-    display: block;
-    position: absolute;
-    top: 110px;
-    left: 0;
-    @include sizes(100%);
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0, -10px);
-    @include transition(all, 0.2s, ease-in-out);
-    z-index: 100;
+	display: block;
+	position: absolute;
+	top: 110px;
+	left: 0;
+	@include sizes(100%);
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(0, -10px);
+	@include transition(all, 0.2s, ease-in-out);
+	z-index: 100;
   }
 
   &__content {
-    display: block;
-    padding: 45px 0;
-    background: $c-white
+	display: block;
+	padding: 45px 0;
+	background: $c-white
+  }
+
+  &__contact {
+	margin-bottom: 5px;
+
+	.icon{
+	  color: $c-white;
+	}
+  }
+
+  &__partner {
+	@include sizes(100px, 43px);
+	margin-top: 20px;
+
+	@include md {
+	  display: none;
+	}
   }
 }
 
@@ -25,20 +42,20 @@
   margin-bottom: 55px;
 
   &__item {
-    @include myfont(18px);
-    margin-bottom: 20px;
+	@include myfont(18px);
+	margin-bottom: 20px;
   }
 
   &__link {
-    text-decoration: none;
-    color: $c-black;
+	text-decoration: none;
+	color: $c-black;
   }
 }
 
 .burger-menu-active {
   .mob-navigation {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
   }
 }

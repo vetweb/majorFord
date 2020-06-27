@@ -1,8 +1,7 @@
 .modal {
   display: block;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  @include sizes(100%);
   left: 0;
   top: 0;
   opacity: 0;
@@ -17,14 +16,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    @include sizes(100%);
   }
 
   &__overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    @include sizes(100%);
     background: #000;
     opacity: 0.8;
     z-index: 1;
@@ -34,7 +31,6 @@
     position: relative;
     background: $c-white;
     max-width: 575px;
-    height: 100%;
     overflow-y: auto;
     z-index: 2;
   }

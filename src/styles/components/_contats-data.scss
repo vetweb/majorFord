@@ -20,3 +20,14 @@
     }
   }
 }
+
+
+.header-contacts-data{
+  &__icon{
+    @include sizes(30px);
+
+    .icon{
+      height: auto;
+    }
+  }
+}

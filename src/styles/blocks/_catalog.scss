@@ -9,12 +9,12 @@
 
   &__col {
     @include sm {
-      width: 50%;
+      width: 60%;
       @include col(20px);
     }
 
     @include lg {
-      width: 33.3333%;
+      width: 44%;
     }
   }
 }
@@ -67,7 +67,7 @@
   &__price {
     margin-bottom: 25px;
     @include myfont(30px);
-    font-weight: 700;
+    font-weight: 400;
 
     @include sm {
       @include myfont(22px);
@@ -76,7 +76,6 @@
 
     @include md {
       @include myfont(30px);
-      font-weight: 700;
     }
   }
 }

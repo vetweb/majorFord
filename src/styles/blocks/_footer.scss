@@ -1,43 +1,48 @@
 .footer {
   padding: 45px 0 15px;
-  background: #0b2e13;
+  background: #333;
   color: #fff;
 
-  @include sm {
-
-  }
-
   &__info {
-    color: $c-white;
-    @include myfont(10px);
+	color: $c-white;
+	@include myfont(10px);
 
-    @include md {
-      @include myfont(12px);
-    }
+	@include md {
+	  @include myfont(12px);
+	}
 
-    p {
-      margin-bottom: 15px;
-    }
+	p {
+	  margin-bottom: 15px;
+	}
   }
 }
 
 .footer-grid {
 
   @include sm {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
   }
 
   &__left {
-    @include sm {
-      width: 50%;
+
+    @include sm{
+      width: 100%;
+      flex: 1 0 auto;
     }
+
+	@include md {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+	}
   }
 
   &__right {
-    @include sm {
-      width: 50%;
-    }
+	@include md {
+	  width: 50%;
+	}
   }
 }
 
@@ -48,38 +53,38 @@
   justify-content: space-between;
   margin: 50px 0 40px 0;
 
-
   @include md {
+    margin: 0 0 0 20px;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+	justify-content: flex-start;
   }
 
   &__item {
-    list-style: none;
-    padding: 0;
-    margin: 0 30px 15px 0;
+	list-style: none;
+	padding: 0;
+	margin: 0 30px 15px 0;
 
-    @include sm {
-      margin-bottom: 0;
-    }
+	@include sm {
+	  margin-bottom: 0;
+	}
 
-    &--ma {
-      max-width: 122px;
-    }
+	&--ma {
+	  max-width: 122px;
+	}
 
-    &--ya {
-      max-width: 93px;
-    }
+	&--ya {
+	  max-width: 93px;
+	}
 
-    &--ma-lising {
-      max-width: 169px;
-    }
+	&--ma-lising {
+	  max-width: 169px;
+	}
   }
 }
 
 .footer-company-info {
   &__item {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
   }
 }
 

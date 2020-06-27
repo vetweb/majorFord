@@ -13,12 +13,15 @@
   }
 
   @include sm {
+    background-position: 62%;
     &:after {
-      @include propotionalSize(55%);
+      @include propotionalSize(51%);
     }
   }
 
   @include md {
+    height: 520px;
+
     &:after {
       @include propotionalSize(29.2%);
     }
@@ -66,7 +69,7 @@
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     @include myfont(25px);
     font-weight: 700;
     color: $c-white;
@@ -82,10 +85,6 @@
 
     @include lg {
       @include myfont(40px);
-    }
-
-    @include xl {
-      margin-bottom: 15px;
     }
   }
 }

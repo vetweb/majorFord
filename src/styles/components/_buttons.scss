@@ -31,4 +31,9 @@
       background: darken($c-bg-btn-inner, 10%);
     }
   }
+
+  &--full-width{
+    width: 100%;
+    max-width: 100%;
+  }
 }

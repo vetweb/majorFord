@@ -18,9 +18,9 @@
 }
 
 .logo {
-  &__link{
-    display: block;
-    text-decoration: none;
+  &__link {
+	display: block;
+	text-decoration: none;
   }
 }
 
@@ -38,34 +38,34 @@ $tertiary-color: #a0bcd0;
   height: 50px;
 
   &:hover {
-    cursor: pointer;
+	cursor: pointer;
   }
 
   &::before,
   &::after {
-    content: '';
-    width: 90%;
-    height: 4px;
-    position: absolute;
-    transition: 0.3s ease;
+	content: '';
+	width: 90%;
+	height: 4px;
+	position: absolute;
+	transition: 0.3s ease;
   }
 
   &::before {
-    background-color: $secondary-color;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: 50% 50%;
-    margin-top: -15px;
+	background-color: $secondary-color;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	transform-origin: 50% 50%;
+	margin-top: -15px;
   }
 
   &::after {
-    background-color: transparent;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: 50% 50%;
-    box-shadow: 0 15px 0 0 $secondary-color;
+	background-color: transparent;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	transform-origin: 50% 50%;
+	box-shadow: 0 15px 0 0 $secondary-color;
   }
 }
 
@@ -76,15 +76,14 @@ $tertiary-color: #a0bcd0;
   position: relative;
 
   &::after {
-    content: '';
-    width: 44px;
-    height: 4px;
-    background-color: $secondary-color;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-100%, -50%);
-    transition: 0.3s ease;
+	content: '';
+	@include sizes(44px, px);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-color: $secondary-color;
+	transform: translate(-100%, -50%);
+	transition: .3s ease;
   }
 }
 
@@ -92,31 +91,30 @@ $tertiary-color: #a0bcd0;
   z-index: 2;
 
   &::before {
-    background-color: $black;
-    margin-top: 0;
-    transform: translate(-50%, -50%) rotate(135deg);
+	background-color: $black;
+	margin-top: 0;
+	transform: translate(-50%, -50%) rotate(135deg);
   }
 
   &::after {
-    background-color: $black;
-    transform: translate(-50%, -50%) rotate(-135deg);
-    box-shadow: 0 0 0 0 $primary-color;
+	background-color: $black;
+	transform: translate(-50%, -50%) rotate(-135deg);
+	box-shadow: 0 0 0 0 $primary-color;
   }
 
   .burger__content {
-    color: $black;
+	color: $black;
 
-    &::after {
-      left: 100%;
-      opacity: 0;
-    }
+	&::after {
+	  left: 100%;
+	  opacity: 0;
+	}
   }
 }
 
 .header-menu-dropdown {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  @include sizes(100%);
   top: 0;
   left: 0;
   background: $c-white;
@@ -127,44 +125,44 @@ $tertiary-color: #a0bcd0;
 
 
   &__list {
-    height: 100vh;
-    max-width: 90%;
-    padding: 30px 0;
-    overflow-y: auto;
+	height: 100vh;
+	max-width: 90%;
+	padding: 30px 0;
+	overflow-y: auto;
   }
 
   &__item {
-    position: relative;
-    text-align: center;
-    color: $black;
-    list-style: none;
+	position: relative;
+	text-align: center;
+	color: $black;
+	list-style: none;
 
-    @include sm {
-      padding: 0 15px;
+	@include sm {
+	  padding: 0 15px;
 
-    }
+	}
   }
 
 
   &__link {
-    display: block;
-    padding: 15px 0;
-    font-size: 1.8em;
-    text-decoration: none;
-    color: $c-link;
-    
-    @include sm {
-      font-size: 40px;
-    }
+	display: block;
+	padding: 15px 0;
+	font-size: 1.8em;
+	text-decoration: none;
+	color: $c-link;
 
-    &:hover {
-      color: darken($c-link, 15%);
-    }
+	@include sm {
+	  font-size: 40px;
+	}
+
+	&:hover {
+	  color: darken($c-link, 15%);
+	}
   }
 
   &.open {
-    visibility: visible;
-    opacity: 1;
+	visibility: visible;
+	opacity: 1;
   }
 }
 
@@ -178,20 +176,20 @@ $tertiary-color: #a0bcd0;
   list-style: none;
 
   &__item {
-    margin-right: 20px;
+	margin-right: 20px;
   }
 
   &__link {
-    color: $c-white;
-    font-size: 16px;
-    text-decoration: none;
+	color: $c-white;
+	font-size: 16px;
+	text-decoration: none;
 
-    &:hover {
-      color: #0b2e13;
-    }
+	&:hover {
+	  color: #0b2e13;
+	}
   }
 
-  @include md{
-    display: flex;
+  @include lg {
+	display: flex;
   }
 }
