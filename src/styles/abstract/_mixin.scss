@@ -101,6 +101,12 @@
   }
 }
 
+@mixin md-up-1 {
+  @media screen and (max-width: #{$md_width - 1}) {
+    @content;
+  }
+}
+
 @mixin lg-up {
   @media screen and (max-width: #{$lg_width}) {
     @content;

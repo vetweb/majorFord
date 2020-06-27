@@ -6,9 +6,13 @@
   min-height: 375px;
 
   &__small {
-	padding: 20px 55px 30px;
+	padding: 20px;
 	max-width: 100%;
 	box-shadow: 0 3px 6px #00000029;
+
+	@include sm{
+	  padding: 20px 55px 30px;
+	}
 
 	@include md {
 	  max-width: 300px;

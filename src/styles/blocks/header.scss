@@ -19,7 +19,7 @@
 	}
 
 	.container {
-	  @include md-up {
+	  @include md-up-1 {
 		width: 100%;
 		max-width: 100%;
 		padding: 0;
@@ -32,11 +32,9 @@
 	align-items: center;
 	justify-content: center;
 	flex: 1 0 auto;
-	margin: 0 -15px;
 
 	@include md {
 	  max-width: 540px;
-	  margin: 0 -15px;
 	}
 
 	@include md {
