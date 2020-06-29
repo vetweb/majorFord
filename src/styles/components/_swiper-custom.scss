@@ -8,7 +8,7 @@
 
   &__content {
 	position: relative;
-	width: 175px;
+	width: 150px;
   }
 
   .swiper-pagination {
@@ -24,13 +24,19 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 44px;
+  width: 23px;
   height: 15px;
-  background: #000;
   margin-top: -30px;
+  background: url('#{$img-path-icons}arrow-slider.svg') no-repeat center;
+  background-size: contain;
+
 
   &:before,
-  &:after{
-    content: '';
+  &:after {
+	content: '';
   }
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
 }

@@ -21,13 +21,15 @@
   }
 }
 
-
 .header-contacts-data{
   &__icon{
     @include sizes(30px);
+    color: #fff;
 
     .icon{
-      height: auto;
+	  display: block;
+      margin: 2px auto;
+      @include sizes(22px);
     }
   }
 }

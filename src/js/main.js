@@ -32,22 +32,9 @@ var modalForm = document.querySelector(".jsModalForm");
 
 //Open Modal Rent
 function OpenModal() {
-    let linkMore = document.querySelector(".js-form-order");
-
-    linkMore.onclick = function () {
+    $('.js-form-order').on('click', function() {
         modalForm.classList.add('open');
-    }
-}
-
-//Open Modal Rent
-function OpenModalOrder() {
-    var modalForm2 = document.querySelector(".jsModalForm");
-    var linkMoreNew = document.querySelectorAll(".js-form-call");
-
-    linkMoreNew.onclick = function () {
-        console.log('ok');
-        // modalForm2.classList.add('open');
-    }
+    });
 }
 
 function closeModal() {
@@ -64,7 +51,6 @@ function closeModal() {
 }
 
 OpenModal();
-OpenModalOrder();
 closeModal();
 
 // Swiper Slider
@@ -107,7 +93,7 @@ $(document).ready(function () {
     jQuery.extend(jQuery.validator.messages, {
         required: "This field is required.",
         remote: "Please fix this field.",
-        email: "email введен не корректно",
+        email: "Email введен не корректно",
         url: "Please enter a valid URL.",
         date: "Please enter a valid date.",
         dateISO: "Please enter a valid date (ISO).",
@@ -131,13 +117,13 @@ $(document).ready(function () {
                 // to append radio group validation erro after radio group
                 error.insertAfter(element);
             },
-            highlight: function(element, errorClass, validClass) {
+            highlight: function (element, errorClass, validClass) {
                 $(element).parent('div').addClass(errorClass).removeClass(validClass);
             },
-            unhighlight: function(element, errorClass, validClass) {
+            unhighlight: function (element, errorClass, validClass) {
                 $(element).parent('div').addClass(validClass).removeClass(errorClass);
             },
-            success: function() {
+            success: function () {
                 $('.js-form-success').addClass('success');
                 $('form').hide();
             }

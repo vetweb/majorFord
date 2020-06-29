@@ -112,6 +112,7 @@
     @content;
   }
 }
+
 @mixin propotionalSize($propotionalSize: 56.5%) {
   padding-bottom: $propotionalSize;
 }
