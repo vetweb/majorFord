@@ -10,14 +10,14 @@
 	max-width: 100%;
 	box-shadow: 0 3px 6px #00000029;
 
-	@include sm{
+	@include sm {
 	  padding: 20px 55px 30px;
 	}
 
 	@include md {
 	  max-width: 300px;
 	  padding: 30px 18px;
-      margin-top: 25px;
+	  margin-top: 25px;
 	}
   }
 
@@ -29,7 +29,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	display: none; // display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
@@ -43,6 +43,14 @@
 	  &:last-child {
 		margin-bottom: 0;
 	  }
+	}
+
+	&.success {
+	  display: flex;
+	}
+
+	&--modal {
+	  position: relative;
 	}
   }
 
@@ -199,7 +207,7 @@
   }
 
   &__button {
-    margin-bottom: 0;
+	margin-bottom: 0;
   }
 
   &__input {
@@ -231,8 +239,14 @@
 	}
 
 	&.error {
-	  .checkbox_fake-check {
-		border: 1px solid $c-error;
+	  border: 1px solid $c-error;
+
+	  .icon {
+		color: $c-error;
+	  }
+
+	  input {
+		color: $c-error;
 	  }
 	}
   }

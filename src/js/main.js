@@ -28,7 +28,7 @@ burgerMenu('.top-navigation');
 
 //Open Burger Menu End
 
-let modalForm = document.querySelector(".jsModalForm");
+var modalForm = document.querySelector(".jsModalForm");
 
 //Open Modal Rent
 function OpenModal() {
@@ -36,6 +36,17 @@ function OpenModal() {
 
     linkMore.onclick = function () {
         modalForm.classList.add('open');
+    }
+}
+
+//Open Modal Rent
+function OpenModalOrder() {
+    var modalForm2 = document.querySelector(".jsModalForm");
+    var linkMoreNew = document.querySelectorAll(".js-form-call");
+
+    linkMoreNew.onclick = function () {
+        console.log('ok');
+        // modalForm2.classList.add('open');
     }
 }
 
@@ -53,6 +64,7 @@ function closeModal() {
 }
 
 OpenModal();
+OpenModalOrder();
 closeModal();
 
 // Swiper Slider
@@ -63,7 +75,7 @@ $(document).ready(function () {
         // Optional parameters
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        loop: false,
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
@@ -92,6 +104,25 @@ $(document).ready(function () {
         }
     })
 
+    jQuery.extend(jQuery.validator.messages, {
+        required: "This field is required.",
+        remote: "Please fix this field.",
+        email: "email введен не корректно",
+        url: "Please enter a valid URL.",
+        date: "Please enter a valid date.",
+        dateISO: "Please enter a valid date (ISO).",
+        number: "Please enter a valid number.",
+        digits: "Please enter only digits.",
+        creditcard: "Please enter a valid credit card number.",
+        equalTo: "Please enter the same value again.",
+        accept: "Please enter a value with a valid extension.",
+        maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+        minlength: jQuery.validator.format("Please enter at least {0} characters."),
+        rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+        range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+        max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+        min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+    });
 
     //var $form = $("#register-form");
     $("form[data-form-validate='true']").each(function () {
@@ -99,8 +130,19 @@ $(document).ready(function () {
             errorPlacement: function (error, element) {
                 // to append radio group validation erro after radio group
                 error.insertAfter(element);
+            },
+            highlight: function(element, errorClass, validClass) {
+                $(element).parent('div').addClass(errorClass).removeClass(validClass);
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).parent('div').addClass(validClass).removeClass(errorClass);
+            },
+            success: function() {
+                $('.js-form-success').addClass('success');
+                $('form').hide();
             }
         });
+
     })
 
 });

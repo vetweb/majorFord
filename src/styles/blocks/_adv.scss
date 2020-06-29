@@ -1,13 +1,16 @@
 .adv {
+  margin-top: 35px;
+
   &__slider {
     display: block;
+    margin-top: 25px;
 
     @include lg {
       display: none;
     }
 
     .swiper-container {
-      padding-bottom: 20px;
+      padding-bottom: 0;
     }
   }
 
@@ -16,6 +19,7 @@
 
     @include lg {
       display: block;
+      margin-top: 25px;
     }
   }
 
@@ -75,7 +79,7 @@
     }
 
     &--free-sticker {
-      background-image: url('#{$img-path-icons}i-adv-recommended.svg');
+      background-image: url('#{$img-path-icons}i-adv-free.svg');
     }
 
     &--fast-delivery {

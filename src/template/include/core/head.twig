@@ -28,6 +28,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5afa0625-98a4-4b41-851a-9e0656bf337b&lang=ru_RU"
+            type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                    center: ['55.789124', '37.250648'],
+                    zoom: 16
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                // Создаем геообъект с типом геометрии "Точка".
+                myGeoObject = new ymaps.GeoObject({
+                    // Описание геометрии.
+                    geometry: {
+                        type: "Point",
+                        coordinates: ['55.789124', '37.250648']
+                    },
+                    // Свойства.
+                    properties: {
+                        // Контент метки.
+                        iconContent: 'MAJOR TRUCK CENTER'
+                    }
+                }, {
+                    // Опции.
+                    // Иконка метки будет растягиваться под размер ее содержимого.
+                    preset: 'islands#blackStretchyIcon',
+                    draggable: true
+                });
+
+            myMap.geoObjects
+                .add(myGeoObject)
+                .add(new ymaps.Placemark(['55.789124', '37.250648'], {
+                    balloonContent: '<strong>MAJOR TRUCK CENTER</strong>'
+                }, {
+                    preset: 'islands#blueCircleDotIconWithCaption',
+                    iconCaptionMaxWidth: '50'
+                }));
+        }
+
+    </script>
 </head>
 <body>
 <div class="svg_hidden">
