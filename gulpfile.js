@@ -13,13 +13,13 @@ var gulp = require('gulp'),
  */
 
 var paths = {
-    buildAssets: './assets/',
-    prodPages: './',
+    buildAssets: './build/',
+    prodPages: './build/',
     src: './src/',
     srcScss: './src/styles',
     srcJs: './src/js/',
-    buildJs: './assets/js/',
-    buildCss: './assets/styles/'
+    buildJs: './build/js/',
+    buildCss: './build/styles/'
 };
 
 /**
